@@ -7,6 +7,7 @@
   "scripts": {
     "link": "@matej116/react-native-background-geolocation/scripts/postlink.js",
     "unlink": "@matej116/react-native-background-geolocation/scripts/postunlink.js",
+    "preinstall": "git submodule update -i -r",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
