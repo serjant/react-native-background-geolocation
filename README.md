@@ -243,10 +243,10 @@ In `android/settings.gradle`
 
 ```gradle
 ...
-include ':@mauron85_react-native-background-geolocation-common'
-project(':@mauron85_react-native-background-geolocation-common').projectDir = new File(rootProject.projectDir, '../node_modules/@mauron85/react-native-background-geolocation/android/common')
-include ':@mauron85_react-native-background-geolocation'
-project(':@mauron85_react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@mauron85/react-native-background-geolocation/android/lib')
+include ':@matej116_react-native-background-geolocation-common'
+project(':@matej116_react-native-background-geolocation-common').projectDir = new File(rootProject.projectDir, '../node_modules/@matej116/react-native-background-geolocation/android/common')
+include ':@matej116_react-native-background-geolocation'
+project(':@matej116_react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@matej116/react-native-background-geolocation/android/lib')
 ...
 ```
 
@@ -255,7 +255,7 @@ In `android/app/build.gradle`
 ```gradle
 dependencies {
     ...
-    compile project(':@mauron85_react-native-background-geolocation')
+    compile project(':@matej116_react-native-background-geolocation')
     ...
 }
 ```
