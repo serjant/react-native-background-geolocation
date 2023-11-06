@@ -40,3 +40,14 @@ ext {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task('compileDebugJavaWithJavac') {
+   dependsOn 'compileDebugAidl'
+}
+
+tasks.matching { it.name.startsWith('packageDebug') }.configure {
+    dependsOn(':@matej116_react-native-background-geolocation:compileDebugRenderscript')
+    mustRunAfter(':@matej116_react-native-background-geolocation:generateDebugResValues')
+}
+
+project.tasks.getByName('copyReleaseJniLibsProjectAndLocalJars').mustRunAfter ':@matej116_react-native-background-geolocation:stripReleaseDebugSymbols'
